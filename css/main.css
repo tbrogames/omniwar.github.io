@@ -1,0 +1,632 @@
+/*
+  ========================================
+  Body
+  ========================================
+*/
+
+/* Needed to size carousel to screen size */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* Move body content below navbar */
+    padding-top: 80px;
+}
+
+h1 {
+    font-family: "Oswald", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*@media (min-width: 980px) {
+    body {
+        padding-top: 80px;
+    }
+}*/
+
+/*
+  ========================================
+  Preloader
+  ========================================
+*/
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+  background: #24242a;
+}
+.preloader i {
+  color: #fff;
+  position: absolute;
+  /* using fa-4x to size this instead in html */
+  /*font-size: 36px;
+  line-height: 36px;*/
+  top: 50%;
+  left: 50%;
+  /*height: 36px;
+  width: 36px;*/
+  margin-top: -15px;
+  margin-left: -15px;
+  display: inline-block;
+}
+
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+
+/* Logo */
+.navbar-brand {
+    /* Expand the navbar so the logo will fit */
+    height: auto;
+}
+
+/* Navbar links */
+.navbar-nav > li > a {
+	text-transform: uppercase;
+	font-weight: 600;
+    line-height: 50px;
+}
+
+.play-btn {
+    background: #c32222;
+    /*min-width: 78px;*/
+}
+
+/*.play-btn:hover {*/
+.nav > li > a.play-btn:hover,
+.nav > li > a.play-btn:focus {
+    background: #ff0033;
+}
+
+/*
+  ========================================
+  Hero
+  ========================================
+*/
+/*.hero {
+    padding-top: 80px;
+}*/
+
+.video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #c32222;
+}
+
+.fa-4 {
+    font-size: 7em;
+}
+
+/*
+  ========================================
+  News
+  ========================================
+*/
+
+#news h1 {
+    text-transform: uppercase;
+    padding: 0 0 20px;
+    color: #fff;
+}
+
+#news > .container-fluid {
+    /*padding: 40px 0 120px;*/ /*NOTE: this was messing up the container-fluid, don't set right/left padding on them*/
+    padding-top: 40px;
+    padding-bottom: 120px;
+    background-color: #808080;
+}
+
+.img-container {
+    overflow: hidden;
+}
+
+.img-container img {
+    -webkit-transition: all .5s ease;
+            transition: all .5s ease;
+}
+
+.img-container img:hover {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+}
+
+.caption {
+    position: absolute;
+    /*top: 0;*/
+    top: 50%;
+    right: 0;
+    left: 0;
+    z-index: 1; /* put the caption on top of the image */
+    /*-webkit-transform: translateY(6vw);
+            transform: translateY(6vw);*/
+}
+
+.caption h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 2px 2px 20px #000;
+    font-weight: bold;
+}
+
+/*.news-background {
+    width: 100%;
+    height: 100%;
+}*/
+
+/*
+  ========================================
+  Game
+  ========================================
+*/
+.game {
+    background-image: url('../img/game/game_bg2.png');
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-position: center center;
+    height: 100%;
+    min-height: 600px;
+}
+
+#game > .container-fluid {
+    padding: 0 0;
+    background-color: #808080;
+    border-top: 2px solid #fff;
+}
+
+.game h1,
+.game p {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Oswald", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.game h1 {
+    font-size: 3em;
+    padding-top: 120px;
+    text-shadow: 0 5px 40px #000;
+}
+
+.game p {
+    font-size: 1.2em;
+    padding-top: 50px;
+    text-shadow: 0 5px 6px #000;
+}
+
+/*
+  ========================================
+  Characters
+  ========================================
+*/
+
+#characters {
+    /*padding-bottom: 50px;*/
+}
+
+#characters h1 {
+    text-transform: uppercase;
+    padding: 0 0 20px;
+    color: #fff;
+    font-family: "Oswald", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 48px;
+}
+
+#characters h3 {
+    text-transform: uppercase;
+    font-family: "Oswald", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#characters h4 {
+    text-transform: uppercase;
+}
+
+#characters > .container-fluid {
+    /*padding-top: 40px;*/
+    border-top: 2px solid #fff;
+    background-color: #808080;
+}
+
+#characters .row-fluid {
+    padding-bottom: 45%;
+}
+
+/*.slick-dots li {
+    margin-right: 25px;
+    margin-left: 25px;
+}*/
+
+.character-nav {
+    margin: auto;
+    width: 600px;
+}
+
+.character-info {
+    margin-top: 20px;
+    float: left;
+}
+
+.character-image {
+    /*width: 50%;
+    float: left;*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.character-abilities {
+    margin-top: 20px;
+    float: right;
+    color: #fff;
+}
+
+/*.character-abilities img {
+    clear: left;
+}*/
+
+.character-abilities p {
+    max-width: 290px;
+    overflow: auto; /* clearfix, makes it so ability descriptions don't wrap around the icon */
+    min-height: 40px; /* TODO: is this hacky? Fix for one line descriptions that were breaking the flow, force them to be a min height*/
+}
+
+.ability-icon {
+    margin-right: 20px;
+}
+
+.slider {
+    margin: auto;
+}
+
+.slick-center img {
+    /*color: #e67e22;
+    opacity: 1;*/
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+}
+
+/* TODO: best way to resize the nav images?? */
+.slider-nav .slick-slide img {
+    /*width: 120px;
+    height: 120px;*/
+}
+
+.slick-slide {
+    outline: none; /* get rid of the blue outline */
+}
+
+/* TODO: remove */
+.slick-prev:before, .slick-next:before { 
+    color:red !important;
+}
+
+/*
+  ========================================
+  Maps
+  ========================================
+*/
+
+/*#maps {
+    margin-top: 15px;
+}*/
+
+.section-container {
+    border-top: 2px solid #fff;
+}
+
+/* TODO: either do this or leave the caption at the bottom and fix the vertical size of the map image */
+/* TODO: goal is to make map name be on screen regardless of screen size */
+/*.carousel-caption {
+    top: 45%;
+    bottom: auto;
+}*/
+
+#maps,
+.section-container,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel,
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+/*
+  ========================================
+  Media
+  ========================================
+*/
+
+#media h1 {
+    text-transform: uppercase;
+    padding: 0 0 20px;
+    color: #fff;
+}
+
+#media .embed-responsive {
+    margin-bottom: 30px;
+}
+
+.media-container {
+    /*padding: 40px 0;*/ /*NOTE: this was messing up the container-fluid, don't set right/left padding on them*/
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    background-image: url('../img/media/media_bg.jpg');
+    background-color: #02162e;
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.media-filter {
+    margin-bottom: 50px;
+}
+
+.media-filter a {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-family: "Oswald", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    /*margin: 0 20px;*/
+    text-decoration: none;
+    color: #fff;
+}
+
+.media-filter a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #c32222;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+}
+
+.media-filter a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+}
+
+/*.media-filter a:active:before {*/
+/* Underline the active filter */
+.media-filter .active:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+}
+
+.media-wrapper {
+    /*position: relative;
+    height: 450px;*/
+    /*overflow: hidden;
+    margin: 0 150px;*/ /* NOTE: these are breaking mobile */
+}
+
+.media-div {
+    /*position: absolute;
+    width: 100%;*/
+    /*-webkit-transition: opacity 0.8s ease-out;
+            transition: opacity 0.8s ease-out;*/
+}
+
+.media-wrapper .video-play {
+    background-color: rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.media-wrapper .video-play > i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #c32222;
+}
+
+.media-wrapper .video-play:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fa-2 {
+    font-size: 4em;
+}
+
+/*
+  ========================================
+  Community
+  ========================================
+*/
+
+.community {
+    /*background-image: url('../img/community/community_bg.jpg');
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-position: center center;*/
+    /*border-top: 2px solid #fff;*/
+    /*border-bottom: 1px solid #fff;*/
+    /*background-color: #808080;*/ /* or #363940*/
+    /*background-color: black;*/
+    height: 100%;
+    /*min-height: 250px;*/
+    padding-top: 40px;
+    /*padding-bottom: 120px;*/
+}
+
+/*.community a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background-color: black;
+}*/
+
+.community a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    /*background-color: black;*/
+    /*background-color: #808080;*/
+    background-color: #363940;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: "Oswald", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    /*vertical-align: middle;*/
+    line-height: 50px;
+    position: relative;
+}
+
+.community a i,
+.community a img {
+    float: right;
+    font-size: 32px;
+    line-height: 50px;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    right: 18px;
+}
+
+.btn-community {
+    border-radius: 0px;
+    border: none;
+}
+
+#community {
+    background-color: black; /* or 363940*/
+    border-top: 2px solid #fff;
+}
+
+#community h1 {
+    text-transform: uppercase;
+    padding: 0 0 20px;
+    color: #fff;
+}
+
+/*.outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .25s;
+}*/
+
+.discord {
+    width: 32px;
+    height: 32px;
+}
+
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+
+footer {
+    background: #000;
+    color: #d6d6d6;
+    padding: 60px 0;
+    text-align: center;
+}
+
+footer .social {
+    margin: 40px 0;
+}
+
+/* Footer social icons */
+footer .social a {
+    color: #d6d6d6;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/*
+  ========================================
+  Media Queries
+  ========================================
+*/
+
+/* Medium devices, Desktops */
+@media (max-width: 992px) {
+    section h1 {
+        /* Change font size with screen size */
+        font-size: 32px;
+    }
+    section h2 {
+        /* Change font size with screen size */
+        font-size: 22px;
+    }
+    #game h1 {
+        font-size: 2em;
+    }
+    #game p {
+        font-size: .9em;
+    }
+    .fa-4 {
+        font-size: 4em;
+    }
+
+    /* TODO: figure out a better solution for this, this doesn't work */
+    .character-image {
+        width: 75%;
+    }
+}
+
+/* Small devices, tablets */
+@media (max-width: 768px) {
+    /* TODO: figure out a better solution for this, this doesn't work */
+    .character-image {
+        width: 50%;
+    }
+}
+
+/* Extra small devices, Phones */
+@media (max-width: 480px) {
+    .fa-4 {
+        font-size: 3em;
+    }
+    .character-image {
+        display: none;
+    }
+    /* Screen size is now less than 600px so we have to adjust this width */
+    .character-nav {
+        width: auto;
+        padding: 20px 40px;
+        margin: auto;
+    }
+}
