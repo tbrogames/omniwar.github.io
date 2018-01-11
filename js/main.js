@@ -188,3 +188,51 @@ function onPlayerStateChange(event) {
         }
     }
 }*/
+
+// Loop the splash video when it ends (for a more seamless loop than loop+playlist in url gives)
+
+// Use the YouTube API to pause other videos when a new one is played (since I can't get a click event for youtube iframes)
+// Load the YouTube API asynchronously
+//function loadPlayer() { 
+ //   if (typeof(YT) == 'undefined' || typeof(YT.Player) == 'undefined') {
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        window.onYouTubePlayerAPIReady = function() {
+            onYouTubeIframeAPIReady();
+        };
+    //}
+//}
+
+players = new Array();
+function onYouTubeIframeAPIReady() {
+    var temp = $(".media-music iframe");
+    for (var i = 0; i < temp.length; i++) {
+        var t = new YT.Player($(temp[i]).attr('id'), {
+            events: {
+                'onStateChange': onPlayerStateChange
+            }
+        });
+        players.push(t);
+    }
+}
+//onYouTubeIframeAPIReady();
+
+function onPlayerStateChange(e) {
+    var frm = $(e.target.getIframe());
+    if (e.data === YT.PlayerState.ENDED) {
+        if ('mainPlayer' === frm.attr('id')) {
+            player.playVideo();
+        }
+    }
+    if (e.data === YT.PlayerState.BUFFERING) {
+        if ('mainPlayer' === frm.attr('id')) {
+            setPlaybackQuality('hd720');
+        }
+    }
+}
+function onPlayerReady(e) {
+    e.target.setPlaybackQuality('hd720');
+}

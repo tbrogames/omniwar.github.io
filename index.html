@@ -86,11 +86,19 @@
         <!-- Hero -->
         <section class="hero">
 			<div class="video background-video fixed embed-responsive embed-responsive-16by9">
-				<video muted autoplay loop>
-				<!--<video muted loop>-->
-					<source src="https://cdn2.unrealengine.com/orion/Home Assets/HeaderBkVideo-9a815b1abc67372f41e173817b35c45a9c4c7066.mp4" type="video/mp4">
-                    <!--<source src="video/TestClip.mp4" type="video/mp4">-->
-				</video>
+				<!--<video muted autoplay loop>
+                    <source src="https://www.youtube.com/embed/nrbspAsDarY" type="video/mp4">
+				</video>-->
+				
+				<div class="video-wrap">
+					<!-- Using a youtube video greatly saves on bandwidth -->
+					<iframe id="mainPlayer" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/OlZdCN4iyuw?autoplay=1&amp;loop=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1&amp;wmode=transparent&amp;origin=https://tbrogames.github.io/&amp;widgetid=1"></iframe>
+					
+					<!-- playlist is what video to loop to, but there is a noticeable break. TODO: so how does PUBG do it?? -->
+					<!--<iframe class="videoContainer__video" width="1920" height="1080" src="http://www.youtube.com/embed/OlZdCN4iyuw?modestbranding=1&autoplay=1&controls=0&fs=0&loop=1&rel=0&showinfo=0&disablekb=1&playlist=OlZdCN4iyuw" frameborder="0"></iframe>-->
+				</div>
+				
+				</div>
 
 				<div id="lightgallery-hero">
 					<a class="video-play-button" href="https://www.youtube.com/embed/9G9DeaV9E-s"><i class="fa fa-play-circle fa-4"></i></a>

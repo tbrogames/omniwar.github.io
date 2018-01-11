@@ -102,6 +102,11 @@ h1 {
     color: #c32222;
 }
 
+.video-wrap {
+    /* block pointer events so users can't pause/fullscreen the youtube splash video NOTE: only needed if I keep using youtube for this instead of hosting my own video */
+    pointer-events: none;
+}
+
 .fa-4 {
     font-size: 7em;
 }
