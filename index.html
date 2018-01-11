@@ -91,8 +91,11 @@
 				</video>-->
 				
 				<div class="video-wrap">
+					<img class="video-poster" src="img/poster/OmniwarRender.jpg">
 					<!-- Using a youtube video greatly saves on bandwidth -->
-					<iframe id="mainPlayer" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/OlZdCN4iyuw?autoplay=1&amp;loop=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1&amp;wmode=transparent&amp;origin=https://tbrogames.github.io/&amp;widgetid=1"></iframe>
+					<!--iframe id="mainPlayer" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/OlZdCN4iyuw?autoplay=1&amp;loop=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1&amp;wmode=transparent&amp;origin=https://tbrogames.github.io/&amp;widgetid=1"></iframe>-->
+					<!-- The <iframe> (and video player) will replace this <div> tag -->
+					<div id="mainPlayer"></div>
 					
 					<!-- playlist is what video to loop to, but there is a noticeable break. TODO: so how does PUBG do it?? -->
 					<!--<iframe class="videoContainer__video" width="1920" height="1080" src="http://www.youtube.com/embed/OlZdCN4iyuw?modestbranding=1&autoplay=1&controls=0&fs=0&loop=1&rel=0&showinfo=0&disablekb=1&playlist=OlZdCN4iyuw" frameborder="0"></iframe>-->
@@ -198,29 +201,29 @@
 							<div class="character-info">
 								<h1>Dumon</h1>
 							</div>
-							<div class="character-image" style="background-image: url('img/characters/cutouts/smoke.png');">
-								<!--<img class="img-responsive" src="img/characters/cutouts/smoke.png"></img>-->
+							<div class="character-image" style="background-image: url('img/characters/cutouts/dumon.png');">
+								<!--<img class="img-responsive" src="img/characters/cutouts/dumon.png"></img>-->
 							</div>
 							<div class="character-abilities">
 								<h3>Abilities</h3>
 
-								<img class="pull-left ability-icon" src="img/characters/abilities/smoke/Smoke_Attack_Icon.png"></img>
+								<img class="pull-left ability-icon" src="img/characters/abilities/dumon/Smoke_Attack_Icon.png"></img>
 								<h4>Chain Blades</h4>
 								<p>Blades on the end of chains that are used to perform melee combos.</p>
 
-								<img class="pull-left ability-icon" src="img/characters/abilities/smoke/Smoke_Smoke_Icon.png"></img>
+								<img class="pull-left ability-icon" src="img/characters/abilities/dumon/Smoke_Smoke_Icon.png"></img>
 								<h4>Smoke</h4>
 								<p>A shroud of smoke that conceals you and passively suffocates enemies.</p>
 
-								<img class="pull-left ability-icon" src="img/characters/abilities/smoke/Smoke_Push_Icon.png"></img>
+								<img class="pull-left ability-icon" src="img/characters/abilities/dumon/Smoke_Push_Icon.png"></img>
 								<h4>Smoke Push</h4>
 								<p>Push a cloud of smoke that acts as a decoy and also damages enemies.</p>
 
-								<img class="pull-left ability-icon" src="img/characters/abilities/smoke/Smoke_Tornado_Icon.png"></img>
+								<img class="pull-left ability-icon" src="img/characters/abilities/dumon/Smoke_Tornado_Icon.png"></img>
 								<h4>Blade Tornado</h4>
 								<p>A spinning melee strike that damages and slows enemies in order to keep them from escaping your smoke.</p>
 
-								<img class="pull-left ability-icon" src="img/characters/abilities/smoke/Smoke_Pull_Icon.png"></img>
+								<img class="pull-left ability-icon" src="img/characters/abilities/dumon/Smoke_Pull_Icon.png"></img>
 								<h4>Chain Pull</h4>
 								<p>Throw a chain blade at enemies and pull them back into your smoke.</p>
 							</div>
@@ -298,29 +301,29 @@
 							<div class="character-info">
 								<h1>Khalli</h1>
 							</div>
-							<div class="character-image" style="background-image: url('img/characters/cutouts/panthergirl.png');">
-								<!--<img class="img-responsive" src="img/characters/cutouts/panthergirl.png"></img>-->
+							<div class="character-image" style="background-image: url('img/characters/cutouts/khalli.png');">
+								<!--<img class="img-responsive" src="img/characters/cutouts/khalli.png"></img>-->
 							</div>
 							<div class="character-abilities">
 								<h3>Abilities</h3>
 
-								<img class="pull-left ability-icon" src="img/characters/abilities/panthergirl/Panther_Girl_Electricity_Icon.png"></img>
+								<img class="pull-left ability-icon" src="img/characters/abilities/khalli/Panther_Girl_Electricity_Icon.png"></img>
 								<h4>Lightning</h4>
 								<p>A chargeable ball of lightning that homes towards enemies. The longer it is charged, the more it damages but less it homes.</p>
 
-								<img class="pull-left ability-icon" src="img/characters/abilities/panthergirl/Panther_Heal_Icon.png"></img>
+								<img class="pull-left ability-icon" src="img/characters/abilities/khalli/Panther_Heal_Icon.png"></img>
 								<h4>Heal Allies</h4>
 								<p>Heal allies that are close to you.</p>
 
-								<img class="pull-left ability-icon" src="img/characters/abilities/panthergirl/Panther_Scratch_Icon.png"></img>
+								<img class="pull-left ability-icon" src="img/characters/abilities/khalli/Panther_Scratch_Icon.png"></img>
 								<h4>Scratch</h4>
 								<p>Scratch enemies with your sharp claws.</p>
 
-								<img class="pull-left ability-icon" src="img/characters/abilities/panthergirl/Panther_Summon_Icon.png"></img>
+								<img class="pull-left ability-icon" src="img/characters/abilities/khalli/Panther_Summon_Icon.png"></img>
 								<h4>Summon Panther</h4>
 								<p>Summon a panther AI companion to your side that will hunt enemies.</p>
 
-								<img class="pull-left ability-icon" src="img/characters/abilities/panthergirl/Panther_Girl_Ice_Icon.png"></img>
+								<img class="pull-left ability-icon" src="img/characters/abilities/khalli/Panther_Girl_Ice_Icon.png"></img>
 								<h4>Freeze</h4>
 								<p>Cast an ice spell that will freeze anyone it hits.</p>
 							</div>
@@ -364,8 +367,8 @@
 							<div class="character-info">
 								<h1>Skarv</h1>
 							</div>
-							<div class="character-image" style="background-image: url('img/characters/cutouts/scarv.png');">
-								<!--<img class="img-responsive" src="img/characters/cutouts/smoke.png"></img>-->
+							<div class="character-image" style="background-image: url('img/characters/cutouts/skarv.png');">
+								<!--<img class="img-responsive" src="img/characters/cutouts/dumon.png"></img>-->
 							</div>
 							<div class="character-abilities">
 								<h3>Abilities</h3>
@@ -398,7 +401,7 @@
 								<h1>Skarv - Werewolf</h1>
 							</div>
 							<div class="character-image" style="background-image: url('img/characters/cutouts/werewolf.png');">
-								<!--<img class="img-responsive" src="img/characters/cutouts/smoke.png"></img>-->
+								<!--<img class="img-responsive" src="img/characters/cutouts/dumon.png"></img>-->
 							</div>
 							<div class="character-abilities">
 								<h3>Abilities</h3>
@@ -430,7 +433,7 @@
 							<div class="character-info">
 								<h1>Slirch</h1>
 							</div>
-							<div class="character-image" style="background-image: url('img/characters/cutouts/alien.png');">
+							<div class="character-image" style="background-image: url('img/characters/cutouts/slirch.png');">
 								<!--<img class="img-responsive" src="img/characters/cutouts/alien.png"></img>-->
 							</div>
 							<div class="character-abilities">
@@ -496,29 +499,29 @@
 							<div class="character-info">
 								<h1>Treena</h1>
 							</div>
-							<div class="character-image" style="background-image: url('img/characters/cutouts/treegirl.png');">
-								<!--<img class="img-responsive" src="img/characters/cutouts/treegirl.png"></img>-->
+							<div class="character-image" style="background-image: url('img/characters/cutouts/treena.png');">
+								<!--<img class="img-responsive" src="img/characters/cutouts/treena.png"></img>-->
 							</div>
 							<div class="character-abilities">
 								<h3>Abilities</h3>
 
-								<img class="pull-left ability-icon" src="img/characters/abilities/treegirl/TreeGirl_Shoot_Icon.png"></img>
+								<img class="pull-left ability-icon" src="img/characters/abilities/treena/TreeGirl_Shoot_Icon.png"></img>
 								<h4>Long Bow</h4>
 								<p>A wooden bow that shoots arrows further the longer it is drawn back. Arrows heal allies and damage enemies.</p>
 
-								<img class="pull-left ability-icon" src="img/characters/abilities/treegirl/TreeGirl_Healing_Tree_Icon.png"></img>
+								<img class="pull-left ability-icon" src="img/characters/abilities/treena/TreeGirl_Healing_Tree_Icon.png"></img>
 								<h4>Healing Tree</h4>
 								<p>Plant a tree that heals everyone within its radius.</p>
 
-								<img class="pull-left ability-icon" src="img/characters/abilities/treegirl/TreeGirl_Spike_Icon.png"></img>
+								<img class="pull-left ability-icon" src="img/characters/abilities/treena/TreeGirl_Spike_Icon.png"></img>
 								<h4>Spikes</h4>
 								<p>Spikes shoot out from your body bleeding close by enemies.</p>
 
-								<img class="pull-left ability-icon" src="img/characters/abilities/treegirl/TreeGirl_Root_Icon.png"></img>
+								<img class="pull-left ability-icon" src="img/characters/abilities/treena/TreeGirl_Root_Icon.png"></img>
 								<h4>Rooted</h4>
 								<p>Dig your roots into the ground to turn into an immobilized turret. Greatly increase bow firing rate, damage, and defense.</p>
 
-								<img class="pull-left ability-icon" src="img/characters/abilities/treegirl/TreeGirl_Hand_Icon.png"></img>
+								<img class="pull-left ability-icon" src="img/characters/abilities/treena/TreeGirl_Hand_Icon.png"></img>
 								<h4>Spirit Trance</h4>
 								<p>Reach out and entrap everyone in a radius. At the end of the trance, allies are healed, enemies are damaged, and companions are stolen.</p>
 							</div>
@@ -563,16 +566,16 @@
 					<div class="slider-nav">
 						<!-- NOTE: testing these with img-responsive class -->
 						<div><img class="img-responsive" src="img/characters/portraits/bomber.png"></img></div>			<!-- Bomber -->
-						<div><img class="img-responsive" src="img/characters/portraits/smoke.png"></img></div>			<!-- Dumon -->
+						<div><img class="img-responsive" src="img/characters/portraits/dumon.png"></img></div>			<!-- Dumon -->
 						<div><img class="img-responsive" src="img/characters/portraits/grude.png"></img></div>			<!-- Grude -->
 						<div><img class="img-responsive" src="img/characters/portraits/jumper.png"></img></div>			<!-- Jumper -->
-						<div><img class="img-responsive" src="img/characters/portraits/panthergirl.png"></img></div>	<!-- Khalli -->
+						<div><img class="img-responsive" src="img/characters/portraits/khalli.png"></img></div>	<!-- Khalli -->
 						<div><img class="img-responsive" src="img/characters/portraits/rorc.png"></img></div>			<!-- Rorc -->
 						<div><img class="img-responsive" src="img/characters/portraits/skarv.png"></img></div>			<!-- Skarv -->
 						<div><img class="img-responsive" src="img/characters/portraits/werewolf.png"></img></div>		<!-- Skarv - Werewolf -->
 						<div><img class="img-responsive" src="img/characters/portraits/alien.png"></img></div>			<!-- Slirch -->
 						<div><img class="img-responsive" src="img/characters/portraits/tomadon.png"></img></div>		<!-- Tomadon -->
-						<div><img class="img-responsive" src="img/characters/portraits/treegirl.png"></img></div>		<!-- Treena -->
+						<div><img class="img-responsive" src="img/characters/portraits/treena.png"></img></div>		<!-- Treena -->
 						<div><img class="img-responsive" src="img/characters/portraits/xray.png"></img></div>			<!-- Xray -->
 					</div>
 				</div>

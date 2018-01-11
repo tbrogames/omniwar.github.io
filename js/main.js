@@ -192,34 +192,28 @@ function onPlayerStateChange(event) {
 // Loop the splash video when it ends (for a more seamless loop than loop+playlist in url gives)
 
 // Use the YouTube API to pause other videos when a new one is played (since I can't get a click event for youtube iframes)
-// Load the YouTube API asynchronously
-//function loadPlayer() { 
- //   if (typeof(YT) == 'undefined' || typeof(YT.Player) == 'undefined') {
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/player_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        window.onYouTubePlayerAPIReady = function() {
-            onYouTubeIframeAPIReady();
-        };
-    //}
-//}
-
-players = new Array();
-function onYouTubeIframeAPIReady() {
-    var temp = $(".media-music iframe");
-    for (var i = 0; i < temp.length; i++) {
-        var t = new YT.Player($(temp[i]).attr('id'), {
-            events: {
-                'onStateChange': onPlayerStateChange
-            }
-        });
-        players.push(t);
-    }
+// This function creates an <iframe> (and YouTube player)
+// after the API code downloads.
+var player;
+window.onYouTubeIframeAPIReady = function() {
+    player = new YT.Player('mainPlayer', {
+        height: '360', // 640/360 = 1920/1080, same aspect ratio
+        width: '640',
+        videoId: 'tmGJ7m6S6YA',
+        playerVars: { 'autoplay': 1, 'controls': 0, 'showinfo': 0, 'rel': 0, 'enablejsapi':1, 'wmode' : 'transparent'},
+        events : {
+            'onReady' : onPlayerReady,
+            'onStateChange' : onPlayerStateChange
+        }
+    });
 }
-//onYouTubeIframeAPIReady();
-
+// The API calls this function when the player's state changes.
 function onPlayerStateChange(e) {
     var frm = $(e.target.getIframe());
     if (e.data === YT.PlayerState.ENDED) {
@@ -227,12 +221,17 @@ function onPlayerStateChange(e) {
             player.playVideo();
         }
     }
-    if (e.data === YT.PlayerState.BUFFERING) {
+    /*if (e.data === YT.PlayerState.BUFFERING) {
         if ('mainPlayer' === frm.attr('id')) {
-            setPlaybackQuality('hd720');
+            setPlaybackQuality('hd1080');
         }
+    }*/
+    if (e.data === YT.PlayerState.PLAYING) {
+        // Hide the poster image now that the video has finished loading
+        $('.video-poster').hide();
     }
 }
+// The API will call this function when the video player is ready.//
 function onPlayerReady(e) {
-    e.target.setPlaybackQuality('hd720');
+    e.target.setPlaybackQuality('hd1080');
 }
