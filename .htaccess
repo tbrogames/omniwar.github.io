@@ -1,3 +1,6 @@
+# NOTE THIS DOESN'T WORK WITH GITHUB PAGES!!!!
+# THEY DEFAULT MAX AGE TO 10 MINUTES
+
 <filesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
     Header set Cache-Control "max-age=84600, public"
 </filesMatch>
