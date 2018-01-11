@@ -299,6 +299,7 @@ h1 {
 
 .ability-icon {
     margin-right: 20px;
+    width: 64px; height: 64px; /* Best practice: specifying width and height speeds up rendering */
 }
 
 .slider {
