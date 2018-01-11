@@ -1049,6 +1049,21 @@
 
 		<!-- Plugin JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+		<!-- https://varvy.com/pagespeed/defer-loading-javascript.html -->
+		<!-- Deferred loading javascript -->
+		<script type="text/javascript">
+			function downloadJSAtOnload() {
+				var element = document.createElement("script");
+				element.src = "js/defer.js";
+				document.body.appendChild(element);
+			}
+			if (window.addEventListener)
+				window.addEventListener("load", downloadJSAtOnload, false);
+			else if (window.attachEvent)
+				window.attachEvent("onload", downloadJSAtOnload);
+			else window.onload = downloadJSAtOnload;
+		</script>
     </body>
 
 </html>
