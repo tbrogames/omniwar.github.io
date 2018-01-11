@@ -183,7 +183,7 @@ h1 {
   ========================================
 */
 .game {
-    background-image: url('../img/game/game_bg2.png');
+    background-image: url('../img/game/game_bg2.jpg');
     -webkit-background-size: cover;
             background-size: cover;
     background-position: center center;
