@@ -13,7 +13,7 @@ window.onYouTubeIframeAPIReady = function() {
     player = new YT.Player('mainPlayer', {
         height: '360', // 640/360 = 1920/1080, same aspect ratio
         width: '640',
-        videoId: 'zZzL_GhyXuA',
+        videoId: 'fZvZiYlz5pY',
         playerVars: { 'autoplay': 1, 'controls': 0, 'showinfo': 0, 'rel': 0, 'enablejsapi':1, 'wmode' : 'transparent'},
         events : {
             'onReady' : onPlayerReady,
@@ -42,5 +42,5 @@ function onPlayerStateChange(e) {
 }
 // The API will call this function when the video player is ready.//
 function onPlayerReady(e) {
-    e.target.setPlaybackQuality('hd1080');
+    e.target.setPlaybackQuality('highres');
 }
