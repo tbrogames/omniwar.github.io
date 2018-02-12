@@ -32,7 +32,7 @@ function onPlayerStateChange(e) {
     }
     if (e.data === YT.PlayerState.BUFFERING) {
         if ('mainPlayer' === frm.attr('id')) {
-            setPlaybackQuality('hd1080');
+            e.target.setPlaybackQuality('hd1080');
         }
     }
     if (e.data === YT.PlayerState.PLAYING) {
