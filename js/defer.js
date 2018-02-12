@@ -30,11 +30,11 @@ function onPlayerStateChange(e) {
             player.playVideo();
         }
     }
-    /*if (e.data === YT.PlayerState.BUFFERING) {
+    if (e.data === YT.PlayerState.BUFFERING) {
         if ('mainPlayer' === frm.attr('id')) {
             setPlaybackQuality('hd1080');
         }
-    }*/
+    }
     if (e.data === YT.PlayerState.PLAYING) {
         // Hide the poster image now that the video has finished loading
         $('.video-poster').hide();
