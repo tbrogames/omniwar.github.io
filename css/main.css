@@ -96,10 +96,19 @@ h1 {
 
 .video-play-button {
     position: absolute;
-    top: 50%;
+    top: 54.3%;/*50%;*/
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     color: #c32222;
+}
+
+.video-play-button-inner {
+    position: absolute;
+    top: 54.3%;
+    left: 50.2%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #363940;
+    pointer-events: none; /* Ignore pointer events and just use video-play-button for them */
 }
 
 .video-wrap {
@@ -117,7 +126,7 @@ h1 {
 }
 
 .fa-4 {
-    font-size: 7em;
+    font-size: 9em;/*7em;*/
 }
 
 /*

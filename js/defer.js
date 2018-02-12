@@ -42,5 +42,5 @@ function onPlayerStateChange(e) {
 }
 // The API will call this function when the video player is ready.//
 function onPlayerReady(e) {
-    e.target.setPlaybackQuality('highres');
+    e.target.setPlaybackQuality('hd1080');
 }
