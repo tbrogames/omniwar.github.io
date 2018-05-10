@@ -14,6 +14,7 @@ window.onYouTubeIframeAPIReady = function() {
         height: '360', // 640/360 = 1920/1080, same aspect ratio
         width: '640',
         videoId: 'fZvZiYlz5pY',
+        host: 'http://www.youtube.com',
         playerVars: { 'autoplay': 1, 'controls': 0, 'showinfo': 0, 'rel': 0, 'enablejsapi':1, 'wmode' : 'transparent'},
         events : {
             'onReady' : onPlayerReady,
