@@ -96,19 +96,21 @@ h1 {
 
 .video-play-button {
     position: absolute;
-    top: 54.3%;/*50%;*/
-    left: 50%;
+    top: /*54.3%;*/ 50%; /* NOTE: The commented out numbers for top and left are for centering based on the auto play video instead of the poster */
+    left: /*50%;*/ 48.2%;
     transform: translateX(-50%) translateY(-50%);
     color: #c32222;
+    z-index: 2; /* TODO: REMOVE THIS WHEN I GET HERO AUTOPLAY VIDEO WORKING AGAIN */
 }
 
 .video-play-button-inner {
     position: absolute;
-    top: 54.3%;
-    left: 50.2%;
+    top: /*54.3%;*/ 50%; /* NOTE: The commented out numbers for top and left are for centering based on the auto play video instead of the poster */
+    left: /*50.2%;*/ 48.6%;
     transform: translateX(-50%) translateY(-50%);
     color: #363940;
     pointer-events: none; /* Ignore pointer events and just use video-play-button for them */
+    z-index: 2; /* TODO: REMOVE THIS WHEN I GET HERO AUTOPLAY VIDEO WORKING AGAIN */
 }
 
 .video-wrap {
