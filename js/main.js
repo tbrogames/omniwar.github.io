@@ -1,3 +1,9 @@
+$(window).on('load', function() {
+    var preloader = $('.preloader');
+    // Remove the preloader after the page loads
+    preloader.remove();
+});
+
 $(document).ready(function() {
 
     //loadPlayer();
@@ -138,13 +144,6 @@ $(document).ready(function() {
             videoElement.play();
         });       
     }*/
-
-    // Preloader
-    var preloader = $('.preloader');
-    $(window).on('load', function () {
-        // Remove the preloader after the page loads
-        preloader.remove();
-    });
 //});
 
 
