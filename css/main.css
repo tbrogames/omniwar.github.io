@@ -97,7 +97,7 @@ h1 {
 .video-play-button {
     position: absolute;
     top: /*54.3%;*/ 50%; /* NOTE: The commented out numbers for top and left are for centering based on the auto play video instead of the poster */
-    left: /*50%;*/ 48.2%;
+    left: /*50%;*/ 49.9%;
     transform: translateX(-50%) translateY(-50%);
     color: #c32222;
     z-index: 2; /* TODO: REMOVE THIS WHEN I GET HERO AUTOPLAY VIDEO WORKING AGAIN */
@@ -106,7 +106,7 @@ h1 {
 .video-play-button-inner {
     position: absolute;
     top: /*54.3%;*/ 50%; /* NOTE: The commented out numbers for top and left are for centering based on the auto play video instead of the poster */
-    left: /*50.2%;*/ 48.6%;
+    left: /*50.2%;*/ 50.3%;
     transform: translateX(-50%) translateY(-50%);
     color: #363940;
     pointer-events: none; /* Ignore pointer events and just use video-play-button for them */
@@ -194,7 +194,7 @@ h1 {
   ========================================
 */
 .game {
-    background-image: url('../img/game/game_bg2.jpg');
+    background-image: url('../img/game/game_bg13.png');
     -webkit-background-size: cover;
             background-size: cover;
     background-position: center center;
