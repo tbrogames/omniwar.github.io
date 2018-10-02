@@ -127,6 +127,12 @@ $(document).ready(function() {
         ]
     });
 
+    // Open the character when clicking on the new character image in the news section
+    $('.new-character').click(function() {
+        const newCharacterIndex = 0; // Update this to point to the new character id
+        $('.slider').slick('slickGoTo', newCharacterIndex);
+    });
+
     // Play the video when it is ready
     /*var video = $('video');
     var videoElement = video[0]; // The first video element on the page TODO: probably just give it an id instead
